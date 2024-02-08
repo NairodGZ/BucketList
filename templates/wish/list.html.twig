@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+
+
+        <div class=" mx-auto p-1 bg-gray rounded-lg ">
+            <div class="flex flex-wrap justify-center">
+
+
+    {% for wish in wishes %}
+
+        <div class="bg-gray-200 rounded-lg p-8 mb-4 mx-10">
+            <a href="{{ path('app_wish_detail', {'id' : wish.id}) }}" class="text-lg leading-relaxed text-gray-700">{{ wish.title }}</a>
+        </div>
+
+        
+    {% endfor %}
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+    
+{% endblock %}
